@@ -168,8 +168,28 @@
 						<selected>!Skin.HasSetting(homemenu.videos)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--playlists-->
+					<!--movies-->
+					<control type="radiobutton" id="202">
+						<label>$LOCALIZE[342]</label>
+						<width>557</width>
+						<onfocus>Control.Message(1,click,0)</onfocus>
+						<onclick>Skin.ToggleSetting(videomenu.movies)</onclick>
+						<selected>Skin.HasSetting(videomenu.movies)</selected>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+					</control>
+					<!--tvshows-->
 					<control type="radiobutton" id="203">
+						<label>$LOCALIZE[20343]</label>
+						<width>557</width>
+						<onfocus>Control.Message(1,click,0)</onfocus>
+						<onclick>Skin.ToggleSetting(videomenu.tvshows)</onclick>
+						<selected>Skin.HasSetting(videomenu.tvshows)</selected>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+					</control>
+					<!--playlists-->
+					<control type="radiobutton" id="204">
 						<label>$LOCALIZE[136]</label>
 						<width>557</width>
 						<onfocus>Control.Message(1,click,0)</onfocus>
@@ -179,7 +199,7 @@
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
 					</control>
 					<!--video addons-->
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="205">
 						<label>$LOCALIZE[24001]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(videomenu.addons)</onclick>
@@ -476,14 +496,6 @@
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.actors)</onclick>
 						<selected>Skin.HasSetting(moviesmenu.actors)</selected>
-						<include>dialog_Radio</include>
-					</control>
-					<!--movie sets-->
-					<control type="radiobutton" id="212">
-						<label>$LOCALIZE[31993]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(moviesmenu.moviesets)</onclick>
-						<selected>Skin.HasSetting(moviesmenu.moviesets)</selected>
 						<include>dialog_Radio</include>
 					</control>
 					<!--random genre-->

@@ -2,7 +2,7 @@
 	<include name="homeSubMenu">
 		<control type="group" id="1100">
 			<posy>20</posy>
-<!---VIDEO SUBMENU------->
+			<!---VIDEO SUBMENU------->
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>640</width>
@@ -18,103 +18,125 @@
 				<include>homeMenusLayout</include>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(1)</visible>
 				<content>
+					<!--movies-->
 					<item id="1">
+						<label>$LOCALIZE[342]</label>
+						<onclick>SetFocus(1200)</onclick>
+						<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + Skin.HasSetting(videomenu.movies) + [Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
+					</item>
+					<item id="2">
+						<label>$LOCALIZE[342]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,movietitles,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + Skin.HasSetting(videomenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
+					</item>
+					<!--tv shows-->
+					<item id="3">
+						<label>$VAR[tvshows_homemenu_tvshows]</label>
+						<onclick>SetFocus(1210)</onclick>
+						<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + Skin.HasSetting(videomenu.tvshows) + [Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+					</item>
+					<item id="4">
+						<label>$VAR[tvshows_homemenu_tvshows]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + Skin.HasSetting(videomenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+					</item>
+					<item id="5">
 						<label>$LOCALIZE[1024]</label>
 						<onclick>ActivateWindow(Videos,Files,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
-					<item id="2">
+					<item id="6">
 						<label>$INFO[Skin.String(videomenu.playlist1.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="3">
+					<item id="7">
 						<label>$INFO[Skin.String(videomenu.playlist2.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist2.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist2.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="4">
+					<item id="8">
 						<label>$INFO[Skin.String(videomenu.playlist3.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist3.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist3.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="5">
+					<item id="9">
 						<label>$INFO[Skin.String(videomenu.playlist4.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist4.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist4.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="6">
+					<item id="10">
 						<label>$INFO[Skin.String(videomenu.playlist5.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist5.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist5.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="7">
+					<item id="11">
 						<label>$INFO[Skin.String(videomenu.playlist6.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist6.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist6.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="8">
+					<item id="12">
 						<label>$INFO[Skin.String(videomenu.playlist7.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist7.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist7.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="9">
+					<item id="13">
 						<label>$INFO[Skin.String(videomenu.playlist8.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist8.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist8.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="10">
+					<item id="14">
 						<label>$LOCALIZE[24001]</label>
 						<onclick>ActivateWindow(VideoLibrary,Addons,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!Skin.HasSetting(videomenu.addons)</visible>
 					</item>
-					<item id="11">
+					<item id="15">
 						<label>$LOCALIZE[136]</label>
 						<onclick>ActivateWindow(videolibrary,playlists, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!Skin.HasSetting(videomenu.videoplaylists)</visible>
 					</item>
-					<item id="12">
-						<visible>!IsEmpty(Skin.String(CustomVideo.1.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.1.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.1.Path)]</onclick>
-					</item>
-					<item id="13">
-						<visible>!IsEmpty(Skin.String(CustomVideo.2.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.2.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.2.Path)]</onclick>
-					</item>
-					<item id="14">
-						<visible>!IsEmpty(Skin.String(CustomVideo.3.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.3.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.3.Path)]</onclick>
-					</item>
-					<item id="15">
-						<visible>!IsEmpty(Skin.String(CustomVideo.4.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.4.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.4.Path)]</onclick>
-					</item>
 					<item id="16">
-						<visible>!IsEmpty(Skin.String(CustomVideo.5.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.5.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.5.Path)]</onclick>
+						<visible>!IsEmpty(Skin.String(CustomVideo.1.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.1.Path)]</onclick>
 					</item>
 					<item id="17">
-						<visible>!IsEmpty(Skin.String(CustomVideo.6.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.6.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.6.Path)]</onclick>
+						<visible>!IsEmpty(Skin.String(CustomVideo.2.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.2.Path)]</onclick>
 					</item>
 					<item id="18">
-						<visible>!IsEmpty(Skin.String(CustomVideo.7.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.7.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.7.Path)]</onclick>
+						<visible>!IsEmpty(Skin.String(CustomVideo.3.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.3.Path)]</onclick>
 					</item>
 					<item id="19">
+						<visible>!IsEmpty(Skin.String(CustomVideo.4.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.4.Path)]</onclick>
+					</item>
+					<item id="20">
+						<visible>!IsEmpty(Skin.String(CustomVideo.5.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.5.Path)]</onclick>
+					</item>
+					<item id="21">
+						<visible>!IsEmpty(Skin.String(CustomVideo.6.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.6.Path)]</onclick>
+					</item>
+					<item id="22">
+						<visible>!IsEmpty(Skin.String(CustomVideo.7.Path)) + Skin.HasSetting(favourites.global)</visible>
+						<label>$INFO[Skin.String(CustomVideo.7.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.7.Path)]</onclick>
+					</item>
+					<item id="23">
 						<visible>!IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomVideo.8.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.8.Path)]</onclick>
+						<label>$INFO[Skin.String(CustomVideo.8.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomVideo.8.Path)]</onclick>
 					</item>
 				</content>
 			</control>
-<!---LIVE TV SUBMENU------>
+			<!---LIVE TV SUBMENU------>
 			<control type="list" id="1120">
 				<posx>-800</posx>
 				<width>900</width>
@@ -163,7 +185,7 @@
 					</item>
 				</content>
 			</control>
-<!---MUSIC SUBMENU------>
+			<!---MUSIC SUBMENU------>
 			<control type="list" id="1130">
 				<posx>-800</posx>
 				<width>410</width>
@@ -211,7 +233,7 @@
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(MusicLibrary,playlists,$INFO[Skin.String(backspacehome)]))</onclick>
+						<onclick>ActivateWindow(MusicLibrary,playlists,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(musicmenu.playlists)</visible>
 					</item>
 					<item id="9">
@@ -226,7 +248,7 @@
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[20389]</label>
-						<onclick>ActivateWindow(videolibrary,musicvideotitles,$INFO[Skin.String(backspacehome)]))</onclick>
+						<onclick>ActivateWindow(videolibrary,musicvideotitles,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Library.HasContent(musicvideos) + Skin.HasSetting(musicmenu.videos)</visible>
 					</item>
 					<item id="12">
@@ -240,12 +262,12 @@
 					</item>
 					<item id="13">
 						<visible>!IsEmpty(Skin.String(CustomMusic.1.Path)) + Skin.HasSetting(favourites.global)</visible>
-            					<label>$INFO[Skin.String(CustomMusic.1.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomMusic.1.Path)]</onclick>
+						<label>$INFO[Skin.String(CustomMusic.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.1.Path)]</onclick>
 					</item>
 				</content>
 			</control>
-<!---PICTURES SUBMENU------->
+			<!---PICTURES SUBMENU------->
 			<control type="list" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
@@ -266,11 +288,11 @@
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(Pictures,Addons)</onclick>
+						<onclick>ActivateWindow(Pictures,Addons,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 				</content>
 			</control>
-<!---ADDONS SUBMENU------>
+			<!---ADDONS SUBMENU------>
 			<control type="list" id="1150">
 				<posx>-800</posx>
 				<width>410</width>
@@ -342,7 +364,7 @@
 					</item>
 				</content>
 			</control>
-<!---SYSTEM SUBMENU------>
+			<!---SYSTEM SUBMENU------>
 			<control type="list" id="1160">
 				<posx>-800</posx>
 				<width>900</width>
@@ -439,8 +461,8 @@
 					</item>
 				</content>
 			</control>
-		------>
-<!---DISC SUBMENU------>
+			------>
+			<!---DISC SUBMENU------>
 			<control type="list" id="1180">
 				<posx>-800</posx>
 				<width>900</width>
@@ -467,19 +489,21 @@
 					</item>
 				</content>
 			</control>
-<!---MOVIES SUBMENU------>
+			<!---MOVIES SUBMENU------>
 			<control type="list" id="1200">
 				<posx>-800</posx>
 				<width>410</width>
 				<height>800</height>
-				<onback>9000</onback>
 				<onright>8004</onright>
-				<onleft>9000</onleft>
+				<onback condition="!Skin.HasSetting(videomenu.movies)">9000</onback>
+				<onback condition="Skin.HasSetting(videomenu.movies)">1110</onback>
+				<onleft condition="!Skin.HasSetting(videomenu.movies)">9000</onleft>
+				<onleft condition="Skin.HasSetting(videomenu.movies)">1110</onleft>
 				<onup>1200</onup>
 				<ondown>1200</ondown>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Library.HasContent(movies) + Container(9000).HasFocus(3)</visible>
+				<visible allowhiddenfocus="true">Library.HasContent(movies) + [Container(9000).HasFocus(3) | Container(1110).HasFocus(1)]</visible>
 				<include>home_SubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
@@ -547,19 +571,21 @@
 				</content>
 			</control>
 
-<!---TVSHOWS SUBMENU------>
+			<!---TVSHOWS SUBMENU------>
 			<control type="list" id="1210">
 				<posx>-800</posx>
 				<width>410</width>
 				<height>800</height>
-				<onback>9000</onback>
-				<onleft>9000</onleft>
+				<onback condition="!Skin.HasSetting(videomenu.tvshows)">9000</onback>
+				<onback condition="Skin.HasSetting(videomenu.tvshows)">1110</onback>
+				<onleft condition="!Skin.HasSetting(videomenu.tvshows)">9000</onleft>
+				<onleft condition="Skin.HasSetting(videomenu.tvshows)">1110</onleft>
 				<onright>8004</onright>
 				<onup>1210</onup>
 				<ondown>1210</ondown>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Library.HasContent(tvshows) + Container(9000).HasFocus(5)</visible>
+				<visible allowhiddenfocus="true">Library.HasContent(tvshows) + [Container(9000).HasFocus(5) | Container(1110).HasFocus(3)]</visible>
 				<include>home_SubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>

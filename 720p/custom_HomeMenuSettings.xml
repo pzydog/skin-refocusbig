@@ -832,8 +832,26 @@
 						<selected>!Skin.HasSetting(homemenu.addons)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--available updates-->
+					<!--videos-->
+					<control type="radiobutton" id="202">
+						<label>$LOCALIZE[3]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(addonsmenu.video)</onclick>
+						<selected>Skin.HasSetting(addonsmenu.video)</selected>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.addons)</enable>
+					</control>
+					<!--music-->
 					<control type="radiobutton" id="203">
+						<label>$LOCALIZE[2]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(addonsmenu.music)</onclick>
+						<selected>Skin.HasSetting(addonsmenu.music)</selected>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.addons)</enable>
+					</control>
+					<!--available updates-->
+					<control type="radiobutton" id="204">
 						<label>$LOCALIZE[24043]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(addonsmenu.updates)</onclick>
@@ -842,7 +860,7 @@
 						<enable>!Skin.HasSetting(homemenu.addons)</enable>
 					</control>
 					<!--programs-->
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="205">
 						<label>$LOCALIZE[0]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(addonsmenu.programs)</onclick>

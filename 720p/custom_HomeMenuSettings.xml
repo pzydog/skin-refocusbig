@@ -170,7 +170,7 @@
 					</control>
 					<!--movies-->
 					<control type="radiobutton" id="202">
-						<label>$LOCALIZE[342]</label>
+						<label>$LOCALIZE[32800]</label>
 						<width>557</width>
 						<onfocus>Control.Message(1,click,0)</onfocus>
 						<onclick>Skin.ToggleSetting(videomenu.movies)</onclick>
@@ -180,7 +180,7 @@
 					</control>
 					<!--tvshows-->
 					<control type="radiobutton" id="203">
-						<label>$LOCALIZE[20343]</label>
+						<label>$LOCALIZE[32801]</label>
 						<width>557</width>
 						<onfocus>Control.Message(1,click,0)</onfocus>
 						<onclick>Skin.ToggleSetting(videomenu.tvshows)</onclick>
@@ -465,8 +465,16 @@
 						<include>dialog_Radio</include>
 						<enable>Library.HasContent(MovieSets)</enable>
 					</control>
-					<!--trailers-->
+					<!--tags-->
 					<control type="radiobutton" id="208">
+						<label>$LOCALIZE[20459]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.tags)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.tags)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--trailers-->
+					<control type="radiobutton" id="209">
 						<label>$LOCALIZE[31953]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.trailers)</onclick>
@@ -475,7 +483,7 @@
 						<enable>System.HasAddon(plugin.video.the.trailers)</enable>
 					</control>
 					<!--genres-->
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<label>$LOCALIZE[135]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.genres)</onclick>
@@ -483,7 +491,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--years-->
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="211">
 						<label>$LOCALIZE[652]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.years)</onclick>
@@ -491,15 +499,38 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--actors-->
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="212">
 						<label>$LOCALIZE[344]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.actors)</onclick>
 						<selected>Skin.HasSetting(moviesmenu.actors)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--random genre-->
+					<!--directors-->
 					<control type="radiobutton" id="213">
+						<label>$LOCALIZE[20348]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.directors)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.directors)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!-- studios -->
+					<control type="radiobutton" id="214">
+						<label>$LOCALIZE[20388]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.studios)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.studios)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!-- countries -->
+					<control type="radiobutton" id="215">
+						<label>$LOCALIZE[20451]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.countries)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.countries)</selected>
+						<include>dialog_Radio</include>
+					<!--random genre-->
+					<control type="radiobutton" id="216">
 						<label>$LOCALIZE[32011]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.randomgenre)</onclick>
@@ -508,13 +539,14 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--random movie-->
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="217">
 						<label>$LOCALIZE[32012]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.randommovie)</onclick>
 						<selected>Skin.HasSetting(moviesmenu.randommovie)</selected>
 						<visible>System.HasAddon(script.randommovie)</visible>
 						<include>dialog_Radio</include>
+					</control>
 					</control>
 				</control>
 			<!--tv shows submenu-->

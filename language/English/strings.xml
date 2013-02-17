@@ -458,4 +458,8 @@ Please consider supporting the development of XBMC by making a donation.
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>
 
+<!--home menu customizer-->
+<string id="32800">Put movies in this section</string>
+<string id="32801">Put TV shows in this section</string>
+
 </strings>

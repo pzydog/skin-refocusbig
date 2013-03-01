@@ -86,7 +86,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1210) + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1210) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>								
-				<visible>Library.HasContent(TVShows)  + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + !Skin.HasSetting(home.widgets.tvmovies) + Skin.HasSetting(home.widgets)</visible>
+				<visible>Library.HasContent(TVShows)  + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + !Control.HasFocus(1110) + !Control.HasFocus(1200) + !Control.HasFocus(1210) + !Skin.HasSetting(home.widgets.tvmovies) + Skin.HasSetting(home.widgets)</visible>
 				<control type="label">
 					<description>Latest Movies</description>
 					<posx>179</posx>
@@ -1310,7 +1310,7 @@
 					<posy>10</posy>
 					<height>20</height>
 					<width>450</width>
-					<label>32053</label>
+					<label>asd</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
@@ -1573,7 +1573,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1200) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>								
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>[[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]] + Skin.HasSetting(home.widgets.watchlistrecent.movies) + !Skin.HasSetting(home.widgets.movies)</visible>
+				<visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + Skin.HasSetting(home.widgets.watchlistrecent.movies) + !Skin.HasSetting(home.widgets.movies)</visible>
 				<control type="label">
 					<description>Latest Movies</description>
 					<posx>159</posx>

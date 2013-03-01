@@ -636,31 +636,36 @@
 						<visible>Skin.HasSetting(tvshowsmenu.recent)</visible>
 					</item>
 					<item id="4">
+						<label>$LOCALIZE[32900]</label>
+						<onclick>ActivateWindow(Videos,special://skin/playlists/Recently Aired.xsp,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(tvshowsmenu.recentlyaired)</visible>
+					</item>
+					<item id="5">
 						<label>$LOCALIZE[16101]</label>
 						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Episodes.xsp,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.unwatched)</visible>
 					</item>
-					<item id="5">
+					<item id="6">
 						<label>$LOCALIZE[575]</label>
 						<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.inprogress)</visible>
 					</item>
-					<item id="6">
+					<item id="7">
 						<label>$LOCALIZE[135]</label>
 						<onclick>ActivateWindow(Videos,tvshowgenres,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.genres)</visible>
 					</item>
-					<item id="7">
+					<item id="8">
 						<label>$LOCALIZE[652]</label>
 						<onclick>ActivateWindow(Videos,tvshowyears,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.years)</visible>
 					</item>
-					<item id="8">
+					<item id="9">
 						<label>$LOCALIZE[344]</label>
 						<onclick>ActivateWindow(Videos,tvshowactors,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.actors)</visible>
 					</item>
-					<item id="9">
+					<item id="10">
 						<label>$LOCALIZE[31070]</label>
 						<onclick>RunAddon(script.tv.show.next.aired)</onclick>
 						<visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(tvshowsmenu.guide)</visible>

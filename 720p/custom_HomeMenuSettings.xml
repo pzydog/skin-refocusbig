@@ -529,6 +529,7 @@
 						<onclick>Skin.ToggleSetting(moviesmenu.countries)</onclick>
 						<selected>Skin.HasSetting(moviesmenu.countries)</selected>
 						<include>dialog_Radio</include>
+					</control>
 					<!--random genre-->
 					<control type="radiobutton" id="216">
 						<label>$LOCALIZE[32011]</label>
@@ -546,7 +547,6 @@
 						<selected>Skin.HasSetting(moviesmenu.randommovie)</selected>
 						<visible>System.HasAddon(script.randommovie)</visible>
 						<include>dialog_Radio</include>
-					</control>
 					</control>
 				</control>
 			<!--tv shows submenu-->
@@ -569,7 +569,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--watchlist-->
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="202">
 						<label>$LOCALIZE[31086]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(tvshowsmenu.watchlist)</onclick>
@@ -578,11 +578,19 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--recent episodes-->
-					<control type="radiobutton" id="204">
+					<control type="radiobutton" id="203">
 						<label>$LOCALIZE[31094]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(tvshowsmenu.recent)</onclick>
 						<selected>Skin.HasSetting(tvshowsmenu.recent)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--recently aired episodes-->
+					<control type="radiobutton" id="204">
+						<label>$LOCALIZE[32900]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(tvshowsmenu.recentlyaired)</onclick>
+						<selected>Skin.HasSetting(tvshowsmenu.recentlyaired)</selected>
 						<include>dialog_Radio</include>
 					</control>
 					<!--unwatched episodes-->

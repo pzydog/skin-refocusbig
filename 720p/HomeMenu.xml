@@ -25,19 +25,6 @@
 					<onclick>ActivateWindow(Videos,Files,$INFO[Skin.String(backspacehome)])</onclick>
 					<visible>!Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
-				<!-- MOVIE SETS 
-					<item id="523">
-						<label>$LOCALIZE[31993]</label>
-						<label2>-</label2>
-						<onclick>ActivateWindow(10025,videodb://1/7/,return)</onclick>
-						<visible>Skin.HasSetting(homemenu.moviesets) + !Library.HasContent(Movies)</visible>
-					</item>
-					<item id="523">
-						<label>$LOCALIZE[31993]</label>
-						<label2>-</label2>
-						<onclick>ActivateWindow(10025,videodb://1/7/,return)</onclick>
-						<visible>!Skin.HasSetting(homemenu.moviesets) + Library.HasContent(Movies)</visible>
-					</item>-->
 				<!--movies-->
 				<item id="3">
 					<label>$LOCALIZE[342]</label>

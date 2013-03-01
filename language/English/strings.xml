@@ -106,7 +106,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31082">Disable Watchlist Add-on</string>
 
 <string id="31085">Timers</string>
-<string id="31086">Recent</string>
+<string id="31086">Recommended</string>
 <string id="31087">season</string>
 <string id="31088">episode</string>
 <string id="31089">Total</string>
@@ -149,7 +149,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31125">Folders</string>
 <string id="31126">Blend Visualisation and Fanart</string>
 <string id="31127">Artwork</string>
-<string id="31128">show status bar (disables rss ticker)</string>
+<string id="31128">Show status bar (disables rss ticker)</string>
 <string id="31129">Download Banners</string>
 <string id="31130">Download Logos</string>
 <string id="31131">Download Extrafanart</string>
@@ -461,5 +461,8 @@ Please consider supporting the development of XBMC by making a donation.
 <!--home menu customizer-->
 <string id="32800">Put movies in this section</string>
 <string id="32801">Put TV shows in this section</string>
+
+<!-- recently aired episodes -->
+<string id="32900">Recently aired</string>
 
 </strings>
